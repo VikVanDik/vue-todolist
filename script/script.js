@@ -1,0 +1,1 @@
+// 2. Creare i data che mi serviranno a gestire le azioni in pagina.
