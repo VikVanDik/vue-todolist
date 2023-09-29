@@ -22,12 +22,13 @@
         <button class="btn btn-success mx-3 ">Aggiungi</button>
       </div>
       <ul class="list-group list-group-flush list-father">
-        <li class="list">
-          <span>asd</span>
+        <li class="list"  v-for = "(task, index) in tasks">
+          {{task.text}}
           <span class="cross">X</span>
         </li>
       </ul>
     </div>
   </div>
+  <script src="./script/script.js"></script>
 </body>
 </html>
