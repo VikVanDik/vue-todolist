@@ -27,10 +27,11 @@ createApp ({
 
     addTask () {
       this.newTasks.push(newTask)
-    }
+    },
 
     taskDone () {
-      
+      this.flagDone = true
+      li.classlist.add(line)
     }
   },
   

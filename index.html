@@ -30,7 +30,10 @@
 
       <ul class="list-group list-group-flush list-father" v-if = "tasks.length > 0">
 
-        <li class="list"  v-for = "(task, index) in tasks">
+        <li 
+        class="list"
+        v-for = "(task, index) in tasks"
+        @click = "taskDone()">
 
           {{task.text}}
 
