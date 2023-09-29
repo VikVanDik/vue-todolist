@@ -14,17 +14,27 @@
 </head>
 <body>
   <!-- 1. Creare il markup da lavorare con Vue. -->
-  <div class="app">
+  <div id="app">
+
     <div class="container text-center">
+
         <img src="./img/logo.svg" alt="Logo" class="logo m-3 ">
+
       <div class="d-flex justify-content-center ">
-        <input type="text" class="form-control">
-        <button class="btn btn-success mx-3 ">Aggiungi</button>
+
+        <input type="text" class="form-control" v-model = "newTask">
+
+        <button class="btn btn-success mx-3 " @click="">Aggiungi</button>
+
       </div>
+
       <ul class="list-group list-group-flush list-father">
+
         <li class="list"  v-for = "(task, index) in tasks">
+
           {{task.text}}
-          <span class="cross">X</span>
+
+          <span class="cross" @click ="removeTask">X</span>
         </li>
       </ul>
     </div>
