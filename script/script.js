@@ -7,23 +7,34 @@ createApp ({
     return {
       tasks : [
         {
-          text : 'fare la spesa',
+          text : 'Fare la spesa',
           flagDone : false
         },
         {
-          text : 'pagare la bolletta',
+          text : 'Pagare la bolletta',
           flagDone : false
         }
       ],
-      tasksDone : [],
+      newTasks : []
     }
   },
 
   methods : {
+    // Funzione che rimuove la task
+    removeTask (index) {
+      this.tasks.splice(index, 1)
+    },
 
+    addTask () {
+      this.newTasks.push(newTask)
+    }
+
+    taskDone () {
+      
+    }
   },
   
   mounted () {
     
   }
-})
+}) .mount('#app');

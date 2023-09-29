@@ -17,4 +17,10 @@
 
 .cross {
   float: right;
+  cursor: pointer;
+}
+
+.cross:hover {
+  color: red;
+  font-weight: 800;
 }

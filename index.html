@@ -24,11 +24,11 @@
 
         <input type="text" class="form-control" v-model = "newTask">
 
-        <button class="btn btn-success mx-3 " @click="">Aggiungi</button>
+        <button class="btn btn-success mx-3 " @click="addTask">Aggiungi</button>
 
       </div>
 
-      <ul class="list-group list-group-flush list-father">
+      <ul class="list-group list-group-flush list-father" v-if = "tasks.length > 0">
 
         <li class="list"  v-for = "(task, index) in tasks">
 
@@ -37,6 +37,7 @@
           <span class="cross" @click ="removeTask">X</span>
         </li>
       </ul>
+      <h3 v-else>Non ci sono task da svolgere</h3>
     </div>
   </div>
   <script src="./script/script.js"></script>
