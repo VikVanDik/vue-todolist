@@ -16,7 +16,6 @@ createApp ({
         }
       ],
       newTask : '',
-      errorTask : false
     }
   },
 
@@ -35,10 +34,6 @@ createApp ({
         this.tasks.push(taskObject)
       }
     },
-
-    taskDone (index) {
-      
-    }
   },
   
   mounted () {

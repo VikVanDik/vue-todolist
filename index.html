@@ -28,8 +28,7 @@
         class="btn btn-success mx-3 "
         @click="addTask()"
         >Aggiungi</button>
-        <div 
-        class=""
+        <div
         :class ="newTask.length > 4 ? 'd-none' : ''"
         >Devi scrivere una task di almeno 5 caratteri</div>
 
@@ -40,7 +39,8 @@
         <li 
         class="list"
         v-for = "(task, index) in tasks"
-        @click = "taskDone()">
+        @click = "taskDone(index), tasks[index].flagDone = true"
+        :class = "flagDone == true ? 'line' : ''">
 
           {{task.text}}
 
