@@ -24,7 +24,14 @@
 
         <input type="text" class="form-control" v-model = "newTask">
 
-        <button class="btn btn-success mx-3 " @click="addTask">Aggiungi</button>
+        <button
+        class="btn btn-success mx-3 "
+        @click="addTask()"
+        >Aggiungi</button>
+        <div 
+        class=""
+        :class ="newTask.length > 4 ? 'd-none' : ''"
+        >Devi scrivere una task di almeno 5 caratteri</div>
 
       </div>
 

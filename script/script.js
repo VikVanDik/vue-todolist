@@ -15,7 +15,8 @@ createApp ({
           flagDone : false
         }
       ],
-      newTasks : []
+      newTask : '',
+      errorTask : false
     }
   },
 
@@ -26,12 +27,17 @@ createApp ({
     },
 
     addTask () {
-      this.newTasks.push(newTask)
+      if (this.newTask.length > 4) {
+        let taskObject = {
+          text : this.newTask,
+          flagDone : false
+        }
+        this.tasks.push(taskObject)
+      }
     },
 
-    taskDone () {
-      this.flagDone = true
-      li.classlist.add(line)
+    taskDone (index) {
+      
     }
   },
   
