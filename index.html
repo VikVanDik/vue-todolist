@@ -39,8 +39,8 @@
         <li 
         class="list"
         v-for = "(task, index) in tasks"
-        @click = "taskDone(index), tasks[index].flagDone = true"
-        :class = "flagDone == true ? 'line' : ''">
+        @click = "taskDone(index)"
+        :class = "tasks[index].flagDone === true ? 'line' : ''">
 
           {{task.text}}
 

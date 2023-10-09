@@ -34,9 +34,14 @@ createApp ({
         this.tasks.push(taskObject)
       }
     },
+
+    taskDone (index){
+      this.tasks[index].flagDone = !this.tasks[index].flagDone
+      console.log(this.tasks[index].flagDone);
+    }
   },
   
   mounted () {
-    
+  
   }
 }) .mount('#app');
